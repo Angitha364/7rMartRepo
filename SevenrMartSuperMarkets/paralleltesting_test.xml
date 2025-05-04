@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="paralleltestingtest" parallel="tests" thread-count="5">
+
+<test name="edgetest">
+ <parameter name="browser" value="edge"></parameter>
+ <classes>
+   <class name="testScripts.ManageCategoryTest">
+    <methods>
+   <include name="verifyIfUserIsAbleToAddCategory"></include>
+   </methods>
+   </class>
+    </classes>
+</test>
+</suite>
+

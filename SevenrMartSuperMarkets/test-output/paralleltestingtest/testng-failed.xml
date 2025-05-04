@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [paralleltestingtest]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="edgetest(failed)">
+    <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="testScripts.ManageCategoryTest">
+        <methods>
+          <include name="driverQuit"/>
+          <include name="verifyIfUserIsAbleToAddCategory"/>
+          <include name="browserIntilization"/>
+        </methods>
+      </class> <!-- testScripts.ManageCategoryTest -->
+    </classes>
+  </test> <!-- edgetest(failed) -->
+</suite> <!-- Failed suite [paralleltestingtest] -->
