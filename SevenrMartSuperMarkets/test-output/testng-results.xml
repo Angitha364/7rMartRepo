@@ -2,15 +2,15 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-04T17:35:44 IST" name="Suite" finished-at="2025-05-04T17:35:58 IST" duration-ms="14618">
+  <suite started-at="2025-05-05T14:47:36 IST" name="Suite" finished-at="2025-05-05T14:47:45 IST" duration-ms="8340">
     <groups>
       <group name="regression">
-        <method signature="ManageCategoryTest.verifyIfUserIsAbleToAddCategory()[pri:0, instance:testScripts.ManageCategoryTest@28cda624]" name="verifyIfUserIsAbleToAddCategory" class="testScripts.ManageCategoryTest"/>
+        <method signature="ManageNewsTest.manageNews()[pri:0, instance:testScripts.ManageNewsTest@28cda624]" name="manageNews" class="testScripts.ManageNewsTest"/>
       </group> <!-- regression -->
     </groups>
-    <test started-at="2025-05-04T17:35:44 IST" name="Test" finished-at="2025-05-04T17:35:58 IST" duration-ms="14618">
-      <class name="testScripts.ManageCategoryTest">
-        <test-method is-config="true" signature="browserIntilization(java.lang.String)[pri:0, instance:testScripts.ManageCategoryTest@28cda624]" started-at="2025-05-04T17:35:44 IST" name="browserIntilization" finished-at="2025-05-04T17:35:50 IST" duration-ms="6404" status="PASS">
+    <test started-at="2025-05-05T14:47:36 IST" name="Test" finished-at="2025-05-05T14:47:45 IST" duration-ms="8340">
+      <class name="testScripts.ManageNewsTest">
+        <test-method is-config="true" signature="browserIntilization(java.lang.String)[pri:0, instance:testScripts.ManageNewsTest@28cda624]" started-at="2025-05-05T14:47:36 IST" name="browserIntilization" finished-at="2025-05-05T14:47:40 IST" duration-ms="3408" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,22 +21,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserIntilization -->
-        <test-method signature="verifyIfUserIsAbleToAddCategory()[pri:0, instance:testScripts.ManageCategoryTest@28cda624]" started-at="2025-05-04T17:35:50 IST" name="verifyIfUserIsAbleToAddCategory" finished-at="2025-05-04T17:35:56 IST" duration-ms="6202" status="PASS">
+        <test-method signature="manageNews()[pri:0, instance:testScripts.ManageNewsTest@28cda624]" started-at="2025-05-05T14:47:40 IST" name="manageNews" finished-at="2025-05-05T14:47:43 IST" duration-ms="3297" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyIfUserIsAbleToAddCategory -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScripts.ManageCategoryTest@28cda624]" started-at="2025-05-04T17:35:56 IST" name="driverQuit" finished-at="2025-05-04T17:35:58 IST" duration-ms="1939" status="PASS">
+        </test-method> <!-- manageNews -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScripts.ManageNewsTest@28cda624]" started-at="2025-05-05T14:47:43 IST" name="driverQuit" finished-at="2025-05-05T14:47:45 IST" duration-ms="1570" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyIfUserIsAbleToAddCategory status=SUCCESS method=ManageCategoryTest.verifyIfUserIsAbleToAddCategory()[pri:0, instance:testScripts.ManageCategoryTest@28cda624] output={null}]]]>
+                <![CDATA[[TestResult name=manageNews status=SUCCESS method=ManageNewsTest.manageNews()[pri:0, instance:testScripts.ManageNewsTest@28cda624] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-      </class> <!-- testScripts.ManageCategoryTest -->
+      </class> <!-- testScripts.ManageNewsTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
