@@ -19,21 +19,21 @@ public class ManageNewsPage {
 			this.driver =driver;
 			PageFactory.initElements(driver, this);
 		}
-		public void manageMoreInfo()
-		{
-			managenewsmoreinfo.click();
-		}
-		public void clickNew()
+		
+		public ManageNewsPage clickNew()
 		{
 			managenewbutton.click();
+			return this;
 		}
-	public void enterText(String text)//give new variable name in method
+	public ManageNewsPage enterText(String text)//give new variable name in method
 	{
 		managetextarea.sendKeys(text);
+		return this;
 	}
-	public void saveButton()
+	public ManageNewsPage saveButton()
 	{
 		managesave.click();
+		return this;
 	}
 	public boolean alertMessageLoaded()
 	{

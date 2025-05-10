@@ -18,6 +18,7 @@ public void fileUploadUsingSendKeys(WebElement element,String  path)
 }
 public void fileUploadUsingRobotClass(WebElement element,String path) throws AWTException
 {
+	//any of these two methods can use
 	StringSelection ss=new StringSelection(path);//pdf file load
 	Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
 	Robot rb=new Robot();

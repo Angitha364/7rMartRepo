@@ -17,7 +17,7 @@ import org.openqa.selenium.JavascriptExecutor;
 
 	public class SubCategoryPage {
 		WebDriver driver;
-		@FindBy(xpath="//a[contains(@href,'https://groceryapp.uniqassosiates.com/admin/list-sub-category')]")WebElement moreinfo;
+		
 		@FindBy(xpath="//a[@class='btn btn-rounded btn-danger']")WebElement editnew;
 		@FindBy(xpath="//select[@id='cat_id']")WebElement category;
 		@FindBy(xpath="//input[@id='subcategory']")WebElement subcategory;
@@ -35,67 +35,74 @@ import org.openqa.selenium.JavascriptExecutor;
 			this.driver=driver;
 			PageFactory.initElements(driver, this);
 		}
-		public void clickMoreInfo()
-		{
-			moreinfo.click();
-		}
-		public void clickNew()
+		
+		public SubCategoryPage clickNew()
 		{
 			editnew.click();
+			return this;
 		}
-		public void addCategory()
+		public SubCategoryPage addCategory()
 		{
 			PageUtility pageutility = new PageUtility();
 			pageutility.selectByIndex(category, 5);
+			return this;
 			
 			
 		}
-		public void enterSubCategory(String vegtext)
+		public SubCategoryPage enterSubCategory(String vegtext)
 		{
 			subcategory.sendKeys(vegtext);
+			return this;
 		}
-		public void uploadImage()
+		public SubCategoryPage uploadImage()
 		{
 			FileUploadUtility fileuploadutility = new FileUploadUtility();
 			fileuploadutility.fileUploadUsingSendKeys(updatechoosefile, Constants.MANGO);
+			return this;
 		}
-		public void clickSave()
+		public SubCategoryPage clickSave()
 		{
 			WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
 			wait.until(ExpectedConditions.elementToBeClickable(save));
 			save.click();
+			return this;
 		}
 		public boolean isAlertDisplyed()
 		{
 			return alert.isDisplayed();
 		}
-		public void clickAction()
+		public SubCategoryPage clickAction()
 		{
 			//action.click();
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].click();", action);
+			return this;
 		}
-		public void updatecategory()
+		public SubCategoryPage updatecategory()
 		{
 			PageUtility pageutility = new PageUtility();
-			pageutility.selectByIndex(updatecategory, 5);
+			pageutility.selectByIndex(updatecategory, 3);
+			return this;
 			
 		}
-		public void updateSubCategory(String updatetext)
+		public SubCategoryPage updateSubCategory(String updatetext)
 		{
 			updatesubcategory.clear();
 			updatesubcategory.sendKeys(updatetext);
+			return this;
 		}
-		public void updateImage()
+		public SubCategoryPage updateImage()
 		{
 			FileUploadUtility fileuploadutility = new FileUploadUtility();
 			fileuploadutility.fileUploadUsingSendKeys(updatechoosefile, Constants.MANGO);
+			return this;
 		}
-		public void updateSave()
+		public SubCategoryPage updateSave()
 		{
 			//update.click();
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].click();",update );
+			return this;
 		}
 		public boolean isUpdateAlertDisplyed()
 		{

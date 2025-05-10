@@ -4,12 +4,15 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pages.LoginPage;
+import pages.LogoutPage;
 import pages.ManageNewsPage;
 import utilities.ExcelUtilities;
 
 public class ManageNewsTest extends Base{
+	public LogoutPage logoutpage;
+	public ManageNewsPage managenewspage;
 	@Test(groups={"regression"})
-	public void manageNews() throws Exception
+	public void verifyUserAbleToEnterNews() throws Exception
 	{
 		
 			String usrname=ExcelUtilities.readStringData(1, 0, "LoginPage");
@@ -17,18 +20,19 @@ public class ManageNewsTest extends Base{
 			String message=ExcelUtilities.readStringData(0, 1, "ManageNewsPage");
 			
 			LoginPage loginpage=new LoginPage(driver);
-			loginpage.enterUserName(usrname);
-			loginpage.enterPassword(paswrd);
-			loginpage.clickSignIn();
+			loginpage.enterUserName(usrname).enterPassword(paswrd);
+			
+			//loginpage.enterPassword(paswrd);
+			logoutpage=loginpage.clickSignIn();
 			loginpage.isHomePageLoaded();
 			
-			ManageNewsPage managenews=new ManageNewsPage(driver);
-		managenews.manageMoreInfo();
-		managenews.clickNew();
-		managenews.enterText(message);
-		managenews.saveButton();
-		managenews.alertMessageLoaded();
-		boolean alertmessageloaded=managenews.alertMessageLoaded();
+			//ManageNewsPage managenews=new ManageNewsPage(driver);
+			managenewspage=logoutpage.manageMoreInfo();
+			managenewspage.clickNew().enterText(message).saveButton();
+		
+		
+		
+		boolean alertmessageloaded=managenewspage.alertMessageLoaded();
 		Assert.assertTrue(alertmessageloaded);
 	}
 }

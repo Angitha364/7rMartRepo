@@ -11,6 +11,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
 
 public class ScreenShotUtility {
+	//take screen shot of failed test cases 
+	//it give current situation of browser
+	//it is done with help of TakesScreenshot-interface
+	//it will call inside base class @after annotation inside driverquit()
 	public void getScreenShot(WebDriver driver, String failedTestCase) throws IOException { 
  		TakesScreenshot scrShot = (TakesScreenshot) driver; //TakesScreenshot-interface ,it is using for capture screenshot
  		File screenShot = scrShot.getScreenshotAs(OutputType.FILE);//TakesScreenshot interface providing getScreenshotAs method

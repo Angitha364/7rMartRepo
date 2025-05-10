@@ -9,7 +9,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class PageUtility {
 		WebDriver driver;
-		
+	//collection of repeatedly using methods in this project
+		//help page class
  public void selectByIndex(WebElement element,int index) {
 		Select select =new Select(element);
 		select.selectByIndex(index);
@@ -61,19 +62,7 @@ public class PageUtility {
 			return alert.getText();
 			}
 		
-		public void javaScriptRollPageToUpAndDown()
-{
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("window.scrollBy(0,150)","");//Java script,to roll up to down(x,y)
-		}
-		
-		public void javaScriptScrollPageToEnd()
-		{
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("window.scrollBy(0,document.body.scrollHeight)", "");//scroll to page end
-		}
-		
-			public void javaScriptClickSendKeys(WebElement element)
+		public void javaScriptClickSendKeys(WebElement element)
 			{
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 				
@@ -86,6 +75,6 @@ public class PageUtility {
 				
 						js.executeScript("arguments[0].click();",element);
 						}
-
+		
 }
 

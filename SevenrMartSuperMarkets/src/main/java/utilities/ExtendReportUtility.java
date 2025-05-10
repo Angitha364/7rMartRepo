@@ -4,10 +4,12 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class ExtendReportUtility {
+	//used to generate html extend report
+	
 	public static final ExtentReports extentReports = new ExtentReports();
-
+//Avenstack dependency to add in POM.xml
 	public synchronized static ExtentReports createExtentReports() {
-		ExtentSparkReporter reporter = new ExtentSparkReporter("./extent-reports/extent-report.html");
+		ExtentSparkReporter reporter = new ExtentSparkReporter("./extent-reports/extent-report.html");//Create object on the method createExtentReports()
 		reporter.config().setReportName("SevenrMartSuperMarkets");//it will show title on html folder  at the top
 		extentReports.attachReporter(reporter);//attach the report
 		extentReports.setSystemInfo("Organization", "Obsqura");
@@ -17,6 +19,6 @@ public class ExtendReportUtility {
 		extentReports.setSystemInfo("Name", "Nila");
 		extentReports.setSystemInfo("Name", "Jinsha");
 		extentReports.setSystemInfo("Name", "Gopika");
-		return extentReports;//it is returning must a report
+		return extentReports;//particular method is returning a report,it is customized report
 	}
 }

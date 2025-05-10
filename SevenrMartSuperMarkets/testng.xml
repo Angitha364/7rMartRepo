@@ -8,13 +8,44 @@
   <test thread-count="5" name="Test">
   
     <classes>
-     <class name="testScripts.ManageNewsTest">
+    <!-- 
+    
+		 <class name="testScripts.ManageNewsTest">
       <methods>
-    <include name="manageNews"></include>
+    <include name="verifyUserAbleToEnterNews"></include>
     </methods>
 </class>
-      
-     
+
+     <class name="testScripts.ManageFooterTextTest">
+      <methods>
+    <include name="verifyIfUserAbleToUpdateFooterDetails"></include>
+    </methods>
+</class>
+
+<class name="testScripts.ManageCategoryTest">
+      <methods>
+    <include name="verifyIfUserIsAbleToAddCategory"></include>
+    </methods>
+    </class>
+    
+     <class name="testScripts.ManageContactTest">
+      <methods>
+    <include name="verifyIfUserAbleToUpdateContactDetails"></include>
+    </methods>
+    </class> 
+    
+      <class name="testScripts.SubCategoryTest">
+      <methods>
+    <include name="verifyIfUserIsAbleToAddSubCategoryDetails"></include>
+    </methods>
+    </class>-->
+    
+    <class name="testScripts.AdminUserTest">
+      <methods>
+    <include name="verifyThatUserIsAbleToSaveUserDeatils"></include>
+    </methods>
+    </class>
+   
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
