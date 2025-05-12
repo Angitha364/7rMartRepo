@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
- <parameter name="browser" value="edge"></parameter>
+ <parameter name="browser" value="firefox"></parameter>
  <listeners>
 <listener class-name="generateReport.Listeners"></listener>
 </listeners>
   <test thread-count="5" name="Test">
   
     <classes>
-    <!-- 
     
+    <class name="testScripts.AdminUserTest">
+      <methods>
+    <include name="verifyThatUserIsAbleToSaveUserDeatils"></include>
+    </methods>
+    </class>
+   <!--
 		 <class name="testScripts.ManageNewsTest">
       <methods>
     <include name="verifyUserAbleToEnterNews"></include>
@@ -27,25 +32,20 @@
     <include name="verifyIfUserIsAbleToAddCategory"></include>
     </methods>
     </class>
-    
-     <class name="testScripts.ManageContactTest">
-      <methods>
-    <include name="verifyIfUserAbleToUpdateContactDetails"></include>
-    </methods>
-    </class> 
+     
     
       <class name="testScripts.SubCategoryTest">
       <methods>
     <include name="verifyIfUserIsAbleToAddSubCategoryDetails"></include>
     </methods>
+    </class>
+    
+     <class name="testScripts.ManageContactTest">
+      <methods>
+    <include name="verifyIfUserAbleToUpdateContactDetails"></include>
+    </methods>
     </class>-->
     
-    <class name="testScripts.AdminUserTest">
-      <methods>
-    <include name="verifyThatUserIsAbleToSaveUserDeatils"></include>
-    </methods>
-    </class>
-   
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

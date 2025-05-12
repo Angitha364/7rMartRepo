@@ -4,10 +4,10 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class ExtendReportUtility {
-	//used to generate html extend report
+	
 	
 	public static final ExtentReports extentReports = new ExtentReports();
-//Avenstack dependency to add in POM.xml
+
 	public synchronized static ExtentReports createExtentReports() {
 		ExtentSparkReporter reporter = new ExtentSparkReporter("./extent-reports/extent-report.html");//Create object on the method createExtentReports()
 		reporter.config().setReportName("SevenrMartSuperMarkets");//it will show title on html folder  at the top

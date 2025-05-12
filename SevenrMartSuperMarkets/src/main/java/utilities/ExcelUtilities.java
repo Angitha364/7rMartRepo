@@ -1,3 +1,4 @@
+
 package utilities;
 
 import java.io.FileInputStream;
@@ -14,8 +15,7 @@ public class ExcelUtilities {
 	static XSSFWorkbook wb;
 	static XSSFSheet sh;
 	// string sheet is used to pass the sheet name of each page
-	//readStringData to read string data
-	//readIntegerData to read integer data
+	
 	public static String readStringData(int i, int j, String sheet) throws Exception {
 		
 		String filepath = Constants.TESTDATAFILE;// Constants.TESTDATAFILE - static variable

@@ -12,9 +12,7 @@ import com.aventstack.extentreports.Status;
 import utilities.ExtendReportUtility;
 
 public class Listeners implements ITestListener {
-	//used to get customized report implement with help of ITestListener interface
-	//Different methods
-	//all methods in this class provided by ITestListener interface itself
+	
 	 ExtentTest test; 
 	  
 	 	ExtentReports extent = ExtendReportUtility.createExtentReports(); //classname.methodname

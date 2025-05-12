@@ -9,72 +9,75 @@ import utilities.PageUtility;
 
 public class ManageContactPage {
 	WebDriver driver;
-	
-	@FindBy(xpath="//i[@class='fas fa-edit']")WebElement manageContactAction;
-	@FindBy(xpath="//input[@id='phone']")WebElement manageContactPhone;
-	@FindBy(xpath="//input[@id='email']")WebElement manageContactEmail;
-	@FindBy(xpath="(//textarea[@id='content'])[1]")WebElement manageContactAddress;
-	@FindBy(xpath="(//textarea[@id='content'])[2]")WebElement manageContactDeliveryTime;
-	@FindBy(xpath="//input[@id='del_limit']")WebElement manageContactDeliveryChargeLimit;
-	@FindBy(xpath="//button[@name='Update']")WebElement manageContactUpdate;
-	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement manageContactAlert;
+
+	@FindBy(xpath = "//i[@class='fas fa-edit']")
+	WebElement manageContactAction;
+	@FindBy(xpath = "//input[@id='phone']")
+	WebElement manageContactPhone;
+	@FindBy(xpath = "//input[@id='email']")
+	WebElement manageContactEmail;
+	@FindBy(xpath = "(//textarea[@id='content'])[1]")
+	WebElement manageContactAddress;
+	@FindBy(xpath = "(//textarea[@id='content'])[2]")
+	WebElement manageContactDeliveryTime;
+	@FindBy(xpath = "//input[@id='del_limit']")
+	WebElement manageContactDeliveryChargeLimit;
+	@FindBy(xpath = "//button[@name='Update']")
+	WebElement manageContactUpdate;
+	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
+	WebElement manageContactAlert;
+
 	public ManageContactPage(WebDriver driver) {
-		this.driver=driver;
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
-	
-	public ManageContactPage clickManageContactAction()
-	{
-		//manageContactAction.click();	
-		PageUtility pu=new PageUtility();
+	public ManageContactPage clickManageContactAction() {
+		// manageContactAction.click();
+		PageUtility pu = new PageUtility();
 		pu.javaScriptClick(manageContactAction, driver);
 		return this;
 	}
-	public ManageContactPage enterManageContactPhone(String valuemanageContactPhone)
-	{
-		
+
+	public ManageContactPage enterManageContactPhone(String valuemanageContactPhone) {
+
 		manageContactPhone.clear();
 		manageContactPhone.sendKeys(valuemanageContactPhone);
 		return this;
 	}
-	public ManageContactPage enterManageConatctEmail(String valuemanageContactEmail )
-	{
+
+	public ManageContactPage enterManageConatctEmail(String valuemanageContactEmail) {
 		manageContactEmail.clear();
 		manageContactEmail.sendKeys(valuemanageContactEmail);
-		return this;	
+		return this;
 	}
-	public ManageContactPage enterManageConatctAddress(String valuemanageContactAddress )
-	{
+
+	public ManageContactPage enterManageConatctAddress(String valuemanageContactAddress) {
 		manageContactAddress.clear();
 		manageContactAddress.sendKeys(valuemanageContactAddress);
 		return this;
 	}
-	public ManageContactPage enterManageContactDeliveryTime(String valuemanageContactDeliveryTime )
-	{
+
+	public ManageContactPage enterManageContactDeliveryTime(String valuemanageContactDeliveryTime) {
 		manageContactDeliveryTime.clear();
 		manageContactDeliveryTime.sendKeys(valuemanageContactDeliveryTime);
 		return this;
 	}
-	public ManageContactPage enterManageContactDeliveryCharge(String valuemanageContactDeliveryChargeLimit)
-	{
+
+	public ManageContactPage enterManageContactDeliveryCharge(String valuemanageContactDeliveryChargeLimit) {
 		manageContactDeliveryChargeLimit.clear();
 		manageContactDeliveryChargeLimit.sendKeys(valuemanageContactDeliveryChargeLimit);
 		return this;
 	}
-	
-	
-	public ManageContactPage clickManageContactUpdate()
-	{
-		PageUtility pu=new PageUtility();
+
+	public ManageContactPage clickManageContactUpdate() {
+		PageUtility pu = new PageUtility();
 		pu.javaScriptClick(manageContactUpdate, driver);
 		return this;
-	
+
 	}
-	public boolean isManageContactAlertDisplayed()
-	{
+
+	public boolean isManageContactAlertDisplayed() {
 		return manageContactAlert.isDisplayed();
 	}
 }
-
-

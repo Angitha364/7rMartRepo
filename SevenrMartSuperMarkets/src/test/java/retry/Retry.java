@@ -4,8 +4,7 @@ import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
 public class Retry implements IRetryAnalyzer {
-	//to re execute the failed test cases
-	//retry parameter using in @Test annotation in test class
+	
 	int counter = 0;
 	int retryLimit = 2;
 	
