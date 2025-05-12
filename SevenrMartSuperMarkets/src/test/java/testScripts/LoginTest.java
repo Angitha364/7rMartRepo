@@ -83,9 +83,9 @@ public class LoginTest extends Base {
 		Assert.assertTrue(alertmessageloaded, Constants.INCORRECTPASSWORD);
 	}
 
-@DataProvider(name = "LoginProvider")
+	@DataProvider(name = "LoginProvider")
 	public Object[][] getDataFromData() throws Exception {
 		return new Object[][] { { ExcelUtilities.readStringData(4, 0, "LoginPage"),
 				ExcelUtilities.readStringData(4, 1, "LoginPage") } };
-}
+	}
 }

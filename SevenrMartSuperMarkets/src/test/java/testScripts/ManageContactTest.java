@@ -1,7 +1,9 @@
 package testScripts;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constants;
 import pages.LoginPage;
 import pages.LogoutPage;
 import pages.ManageContactPage;
@@ -13,7 +15,7 @@ public class ManageContactTest extends Base {
 	public LogoutPage logoutpage;
 	public ManageContactPage managecontactpage;
 
-	@Test(groups = { "regression" }, description = "Verify the user is able to update contact")
+	@Test(groups = { "regression" }, description = "Verify the user is able to update contact details")
 	public void verifyIfUserAbleToUpdateContactDetails() throws Exception {
 		String username = ExcelUtilities.readStringData(1, 0, "loginpage");
 		String password = ExcelUtilities.readStringData(1, 1, "loginpage");
@@ -43,7 +45,7 @@ public class ManageContactTest extends Base {
 				.enterManageContactDeliveryCharge(manageContactDeliveryCharge).clickManageContactUpdate();
 
 		boolean isgreenalertdisplayed = managecontactpage.isManageContactAlertDisplayed();
-		Assert.assertTrue(isgreenalertdisplayed);
+		Assert.assertTrue(isgreenalertdisplayed, Constants.MANAGECONTACTFILE);
 
 	}
 

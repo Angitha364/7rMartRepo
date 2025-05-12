@@ -3,6 +3,8 @@ package testScripts;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constants;
+
 //import com.aventstack.extentreports.util.Assert;
 
 import pages.LoginPage;
@@ -32,7 +34,7 @@ public class ManageCategoryTest extends Base {
 		managecategorypage = logoutpage.manageCategoryMoreInfo();
 		managecategorypage.clickNew().enterCategory(categorys).clickDiscount().chooseImage().clickSave();
 		boolean isgreenalertdisplayed = managecategorypage.isAlertDisplayed();
-		Assert.assertTrue(isgreenalertdisplayed);
+		Assert.assertTrue(isgreenalertdisplayed, Constants.MANAGECATEGORYFILE);
 
 	}
 

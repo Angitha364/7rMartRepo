@@ -37,12 +37,11 @@ public class Base {
 		}
 		if (browser.equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();
-		} 
-		
+		}
+
 		else if (browser.equalsIgnoreCase("chrome")) {
 			driver = new EdgeDriver();
-		}
-		else {
+		} else {
 			throw new Exception("invalid browser");
 		}
 		// driver.get("https://groceryapp.uniqassosiates.com/admin/login");

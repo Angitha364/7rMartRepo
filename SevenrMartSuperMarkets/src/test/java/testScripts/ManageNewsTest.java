@@ -3,6 +3,7 @@ package testScripts;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constants;
 import pages.LoginPage;
 import pages.LogoutPage;
 import pages.ManageNewsPage;
@@ -12,7 +13,7 @@ public class ManageNewsTest extends Base {
 	public LogoutPage logoutpage;
 	public ManageNewsPage managenewspage;
 
-	@Test(groups = { "regression" })
+	@Test(groups = { "regression" }, description = "Verify the user is able to enter news")
 	public void verifyUserAbleToEnterNews() throws Exception {
 
 		String usrname = ExcelUtilities.readStringData(1, 0, "LoginPage");
@@ -31,6 +32,6 @@ public class ManageNewsTest extends Base {
 		managenewspage.clickNew().enterText(message).saveButton();
 
 		boolean alertmessageloaded = managenewspage.alertMessageLoaded();
-		Assert.assertTrue(alertmessageloaded);
+		Assert.assertTrue(alertmessageloaded, Constants.MANAGENEWSFILE);
 	}
 }

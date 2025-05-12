@@ -3,6 +3,7 @@ package testScripts;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constants;
 import pages.LoginPage;
 import pages.LogoutPage;
 import pages.ManageFooterTextPage;
@@ -31,11 +32,11 @@ public class ManageFooterTextTest extends Base {
 		managefooter = logoutpage.clickMoreInfo();
 		managefooter.addAction().addAction().addEmail(email).addPhone(phone).addAddress(address).updateDetails();
 		boolean alertdisplayed = managefooter.isAlertDisplayed();
-		Assert.assertTrue(alertdisplayed);
+		Assert.assertTrue(alertdisplayed, Constants.MANAGEFOOTERUPDATE);
 
 	}
 
-	@Test(groups = { "regression" }, description = "Verify the update button displayed")
+	@Test(groups = { "regression" }, description = "")
 	public void verifyIfUpdateButtonIsDisplayed() throws Exception {
 		String username = ExcelUtilities.readStringData(1, 0, "LoginPage");
 		String password = ExcelUtilities.readStringData(1, 1, "LoginPage");
@@ -48,6 +49,6 @@ public class ManageFooterTextTest extends Base {
 
 		managefooter.addAction();
 		boolean isUpdateDisplayed = managefooter.isUpdateDisplayed();
-		Assert.assertTrue(isUpdateDisplayed);
+		Assert.assertTrue(isUpdateDisplayed, Constants.MANAGEFOOTERDISPLAY);
 	}
 }

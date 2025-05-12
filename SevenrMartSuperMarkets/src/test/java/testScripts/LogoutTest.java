@@ -3,6 +3,7 @@ package testScripts;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constants;
 import pages.LoginPage;
 import pages.LogoutPage;
 import utilities.ExcelUtilities;
@@ -25,6 +26,6 @@ public class LogoutTest extends Base {
 		// LogoutPage logout=new LogoutPage(driver);
 		logoutpage.admin().logout();
 		boolean loginpageloaded = logoutpage.isLoginPageLoaded();
-		Assert.assertTrue(loginpageloaded);
+		Assert.assertTrue(loginpageloaded, Constants.LOGOUTFILE);
 	}
 }

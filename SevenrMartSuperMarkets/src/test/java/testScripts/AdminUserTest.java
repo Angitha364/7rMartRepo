@@ -3,6 +3,7 @@ package testScripts;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constants;
 import pages.AdminUserPage;
 import pages.LoginPage;
 import pages.LogoutPage;
@@ -12,7 +13,7 @@ public class AdminUserTest extends Base {
 	public LogoutPage logoutpage;
 	public AdminUserPage adminuser;
 
-	@Test(groups = { "regression" }, description = "admin user details entered successfully")
+	@Test(groups = { "regression" }, description = "verify that user is able to save user deatils")
 	public void verifyThatUserIsAbleToSaveUserDeatils() throws Exception {
 
 		// FakerUtility fakerutility =new FakerUtility();
@@ -35,7 +36,7 @@ public class AdminUserTest extends Base {
 				.adminUsersaveButton();
 
 		boolean alertmessageloaded = adminuser.alertMessageLoaded();
-		Assert.assertTrue(alertmessageloaded);
+		Assert.assertTrue(alertmessageloaded, Constants.ADMINUSERFILE);
 
 	}
 }

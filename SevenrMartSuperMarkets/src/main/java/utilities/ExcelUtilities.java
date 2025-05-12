@@ -15,9 +15,9 @@ public class ExcelUtilities {
 	static XSSFWorkbook wb;
 	static XSSFSheet sh;
 	// string sheet is used to pass the sheet name of each page
-	
+
 	public static String readStringData(int i, int j, String sheet) throws Exception {
-		
+
 		String filepath = Constants.TESTDATAFILE;// Constants.TESTDATAFILE - static variable
 		fi = new FileInputStream(filepath);
 		wb = new XSSFWorkbook(fi);
@@ -26,6 +26,7 @@ public class ExcelUtilities {
 		XSSFCell cell = row.getCell(j);
 		return cell.getStringCellValue();// give the data type that has to be returned
 	}
+
 	public static String readIntegerData(int i, int j, String sheet) throws Exception {
 		String filepath = Constants.TESTDATAFILE;
 		fi = new FileInputStream(filepath);
@@ -35,5 +36,5 @@ public class ExcelUtilities {
 		XSSFCell cell = row.getCell(j);
 		int val = (int) cell.getNumericCellValue();
 		return String.valueOf(val);
-}
+	}
 }

@@ -3,6 +3,7 @@ package testScripts;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constants;
 import pages.LoginPage;
 import pages.LogoutPage;
 import pages.SubCategoryPage;
@@ -12,7 +13,7 @@ public class SubCategoryTest extends Base {
 	public LogoutPage logoutpage;
 	public SubCategoryPage subcategorypage;
 
-	@Test
+	@Test(groups = { "regression" }, description = "Verify the user is able to add sub category details")
 	public void verifyIfUserIsAbleToAddSubCategoryDetails() throws Exception {
 		String username = ExcelUtilities.readStringData(1, 0, "loginpage");
 		String password = ExcelUtilities.readStringData(1, 1, "loginpage");
@@ -26,11 +27,11 @@ public class SubCategoryTest extends Base {
 		subcategorypage = logoutpage.subCategoryMoreinfo();
 		subcategorypage.clickNew().addCategory().enterSubCategory(category).uploadImage().clickSave();
 		boolean isgreenalertdisplayed = subcategorypage.isAlertDisplyed();
-		Assert.assertTrue(isgreenalertdisplayed);
+		Assert.assertTrue(isgreenalertdisplayed, Constants.SUBCATEGORYENTERDETAILS);
 
 	}
 
-	@Test
+	@Test(groups = { "regression" }, description = "Verify the user is able to update sub category details")
 	public void verifyIfUserIsAbleToUpdateSubCategoryDetails() throws Exception {
 		String username = ExcelUtilities.readStringData(1, 0, "loginpage");
 		String password = ExcelUtilities.readStringData(1, 1, "loginpage");
@@ -46,7 +47,7 @@ public class SubCategoryTest extends Base {
 				.updateSave();
 
 		boolean isgreenalertdisplayed = subcategorypage.isUpdateAlertDisplyed();
-		Assert.assertTrue(isgreenalertdisplayed);
+		Assert.assertTrue(isgreenalertdisplayed, Constants.SUBCATEGORYUPDATEDETAILS);
 	}
 
 }
